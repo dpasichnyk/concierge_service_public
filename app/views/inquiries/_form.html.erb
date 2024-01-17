@@ -1,0 +1,17 @@
+<div class="w-full max-w-xs">
+  <div class="block">
+    <%= form_with(model: inquiry, class: "mb-7", data: { turbo_stream: true }) do |f| %>
+      <%= turbo_frame_tag "inquiry_form_message" %>
+      <div class="mb-5">
+        <%= f.text_field :name, placeholder: "How can we call you?", class: "inline-block w-96 px-3 py-2 mt-2 shadow rounded-md border border-gray-200 outline-none" %>
+        <%= f.email_field :email, placeholder: "Your email", class: "inline-block w-96 px-3 py-2 mt-2 shadow rounded-md border border-gray-200 outline-none" %>
+        <%= f.phone_field :phone_number, placeholder: "Your phone number", class: "inline-block w-96 px-3 py-2 mt-2 shadow rounded-md border border-gray-200 outline-none" %>
+        <%= f.text_field :description, placeholder: "Please write the description of your enquiry", class: "inline-block w-96 px-3 py-2 mt-2 shadow rounded-md border border-gray-200 outline-none" %>
+
+        <div class="block">
+          <%= f.submit "Send inquiry", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

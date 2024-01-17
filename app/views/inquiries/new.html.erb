@@ -1,0 +1,5 @@
+<div class="block">
+  <%= turbo_frame_tag "inquiry_form" do %>
+    <%= turbo_stream.append 'inquiry_form', partial: "form", locals: { inquiry: @inquiry } %>
+  <% end %>
+</div>

@@ -1,0 +1,5 @@
+<div class="block">
+  <%= turbo_frame_tag "inquiry_form" do %>
+    <%= render partial: "form", locals: { inquiry: @inquiry } %>
+  <% end %>
+</div>
